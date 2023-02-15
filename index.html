@@ -3,24 +3,28 @@
   <head>
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Quicksand:wght@500&family=Skranji:wght@700&display=swap" rel="stylesheet">
     <link href = "styles.css" rel = "stylesheet"></link>
     <title>Weather Forecast</title>
   </head>
 
   <body>
+    <div id ="title">
+      <strong>WorldWeather.com</strong>
+    </div>
+    <p id = "con">The best place to check the weather from anywhere in the world!</p>
     <center>
       <div class = "info_block hide">
-        <p>temp</p>
+        <p id = "p1">temp</p>
         <h3>Delhi</h3>
         <table class = "i_data">
-          <tr><th colspan="7">7 Days Ahead </th></tr>
+          <tr><th colspan="7">7 Days Ahead </th></tr><tr></tr>
           <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="d_img"><td><img></td><td><img></td><td><img></td><td><img></td>
           <td><img/></td><td><img></td><td><img></td></tr><tr></tr>
-          <tr><th colspan="7">Hourly</th></tr>
+          <tr><th colspan="7">Hourly</th></tr><tr></tr><tr></tr>
           <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="h_temp"><td><img></td><td><img></td><td><img></td><td><img></td>
           <td><img/></td><td><img></td><td><img></td></tr>
@@ -112,3 +116,4 @@
   <script src = "script.js"></script>
   </body>
 </html>
+
