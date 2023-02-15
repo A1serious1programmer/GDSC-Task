@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href = "styles.css" rel = "stylesheet"></link>
+    <title>Weather Forecast</title>
+  </head>
+
+  <body>
+    <center>
+      <div class = "info_block hide">
+        <p>temp</p>
+        <h3>Delhi</h3>
+        <table class = "i_data">
+          <tr><th colspan="7">7 Days Ahead </th></tr>
+          <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="d_img"><td><img></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr><tr></tr>
+          <tr><th colspan="7">Hourly</th></tr>
+          <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="h_temp"><td><img></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr>
+        </table>
+      </div>
+    </center>
+    <center>
+      <form role="search">
+        <input type="search" id = "s_bar" placeholder="🔎 Search your Location">
+        <button>Search</button>
+      </form>
+    </center>
+    <div class = "container first animated">
+      <center>Mumbai, India
+        <h6>ok</h6>
+        <span >Wind speed</span><br><span>Humidity</span>
+        <table class = "t_data visibility" id = "t_1">
+          <tr><th colspan="7" class="t_h">7 Days Ahead</th></tr>
+          <tr></tr>
+          <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="d_img"><td><img/></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
+          <tr><th colspan="7" class="t_h">Hourly</th></tr>
+          <tr></tr>
+          <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="h_temp"><td><img/></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr>
+        </table>
+      </center>
+    </div>
+    <div class = "container second animated">
+      <center>Punjab, India
+        <h6>ok</h6>
+        <table class = "t_data visibility" id = "t_2">
+          <tr><th colspan="7" class="t_h">7 Days Ahead </th></tr>
+          <tr></tr>
+          <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="d_img"><td><img></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
+          <tr><th colspan="7" class="t_h">Hourly</th></tr>
+          <tr></tr>
+          <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="h_temp"><td><img></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr>
+        </table>
+        <span>Wind speed</span><br><span>Humidity</span>
+      </center>
+    </div>
+    <div class = "container third animated">
+      <center>New Delhi
+        <h6>ok</h6>
+        <table class = "t_data visibility" id = "t_3">
+          <tr><th colspan="7" class="t_h">7 Days Ahead</th></tr>
+          <tr></tr>
+          <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="d_img"><td><img/></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
+          <tr><th colspan="7" class="t_h">Hourly</th></tr>
+          <tr></tr>
+          <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="h_temp"><td><img/></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr>
+        </table>
+        <span>Wind speed</span><br><span>Humidity</span>
+      </center>
+    </div>
+    <div class = "container fourth animated">
+      <center>Los Angeles
+        <h6>ok</h6>
+        <table class = "t_data visibility" id = "t_4">
+          <tr><th colspan="7" class="t_h">7 Days Ahead</th></tr>
+          <tr></tr>
+          <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="d_img"><td><img/></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
+          <tr><th colspan="7" class="t_h">Hourly</th></tr>
+          <tr></tr>
+          <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="h_temp"><td><img/></td><td><img></td><td><img></td><td><img></td>
+          <td><img/></td><td><img></td><td><img></td></tr>
+        </table>
+        <span>Wind speed</span><br><span>Humidity</span>
+      </center>
+    </div>
+  <script src = "script.js"></script>
+  </body>
+</html>
