@@ -111,15 +111,20 @@ document.querySelector("button").addEventListener("click", function(event){
   htem = document.querySelectorAll(".i_data .h_temp td");
   fetch("https://api.weatherapi.com/v1/forecast.json?key=5623049573814f75a9a181747231102&q=" + document.querySelector("input").value + "&days=7")
   .then(response => response.json())
-  .then(data => {for (let i = 0 ; i < 4 ; i++){all_div[i].style.display = "none";}
-  document.querySelector(".info_block").classList.remove("hide");
-      for (let i = 0 ; i < 7 ; i++){
+  .then(data => {for (let i = 0 ; i < 7 ; i++){
+  document.querySelector("h3").innerHTML = document.querySelector("input").value
+  document.querySelector("#p1").innerHTML = data.current.temp_c + "°C"
   dat[i].innerHTML = data.forecast.forecastday[i].date.substring(6,10)
   datt[i].innerHTML = data.forecast.forecastday[i].day.avgtemp_c + "°C"
   ima[i].src = data.forecast.forecastday[i].day.condition.icon.substring(29,46)
   if (hour+i <24){
   hou[i].innerHTML = hour + i
-  htem[i].innerHTML = data.forecast.forecastday[0].hour[hour+i].temp_c + "°C"}}})});
+  htem[i].innerHTML = data.forecast.forecastday[0].hour[hour+i].temp_c + "°C"}}
+  for (let i = 0 ; i < 4 ; i++){all_div[i].style.display = "none";}
+  document.querySelector(".info_block").classList.remove("hide");})
+  .catch(err =>{for (let i = 0 ; i < 4 ; i++){all_div[i].style.display = "";}
+  document.querySelector(".info_block").classList.add("hide");})
+});
 
 for(let i = 0 ; i < all_div.length ; i++){
   all_div[i].addEventListener("mouseenter", function(){
