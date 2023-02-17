@@ -6,114 +6,150 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Quicksand:wght@500&family=Skranji:wght@700&display=swap" rel="stylesheet">
     <link href = "styles.css" rel = "stylesheet"></link>
-    <title>Weather Forecast</title>
+    <title>WorldWeather</title>
   </head>
 
   <body>
+    <div id="blackbg"></div>
+    <div class="aboutme hide1">&nbsp;Hello, My name is Ojas Sharma.
+      <br><br>&nbsp;I know python,c++ and webd.
+      <br><br>&nbsp;This site is made using HTML,CSS AND Vanilla Javascript
+    </div>
+    <div class="docs hide1">&nbsp;api used - https://www.weatherapi.com/
+      <br><br>&nbsp;methods of api used - current,forecast and search.
+      <br><br>&nbsp;fonts used(google fonts) - Dancing Script,Quicksand and Skranji.
+    </div>
+    <div class="contact hide1">&nbsp;my linkedin - https://www.linkedin.com/in/ojas-sharma-64aaba246/<br><br>&nbsp;my github repo link - https://github.com/A1serious1programmer/GDSC-TASK</div>
     <div id ="title">
       <strong>WorldWeather.com</strong>
     </div>
+    <div id="hov">~ Hover to expand ~</div>
+    <p id="err_c" class="hide1">Oops, wrong location name.Please enter location name correctly</p>
+    <div id="nav_bar">
+      <table><tr><td>Home</td><td><a>About Me</a></td><td><a>Docs</a></td><td><a>Contact</a></td></tr></table><hr>
+    </div>
     <p id = "con">The best place to check the weather from anywhere in the world!</p>
-    <center>
-      <div class = "info_block hide">
-        <p id = "p1">temp</p>
-        <h3>Delhi</h3>
-        <table class = "i_data">
-          <tr><th colspan="7">7 Days Ahead </th></tr><tr></tr>
-          <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr class="d_img"><td><img></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr><tr></tr>
-          <tr><th colspan="7">Hourly</th></tr><tr></tr><tr></tr>
-          <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr class="h_temp"><td><img></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr>
-        </table>
-      </div>
-    </center>
-    <center>
-      <form role="search">
-        <input type="search" id = "s_bar" placeholder="🔎 Search your Location">
-        <button>Search</button>
-      </form>
-    </center>
+    <div class = "info_block hide">
+      <p id = "p1">temp</p>
+      <h3>Delhi</h3>
+      <table class = "i_data">
+        <tr><th colspan="7">7 Days Ahead </th></tr><tr></tr>
+        <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="d_img"><td><img></td><td><img></td><td><img></td><td><img></td>
+        <td><img/></td><td><img></td><td><img></td></tr><tr></tr>
+        <tr><th colspan="7">Hourly</th></tr><tr></tr><tr></tr>
+        <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="h_temp"><td><img></td><td><img></td><td><img></td><td><img></td>
+        <td><img/></td><td><img></td><td><img></td></tr>
+      </table>
+    </div>
+    <div class="info_block_r1 hide1">
+      <table id ="i_b_r1">
+        <tr><th colspan="7">Wind</th></tr>
+        <tr class="time"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="wst"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="wsi"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </table>
+    </div>
+    <div class="info_block_r2 hide1">
+      <table id ="i_b_r2">
+        <tr><th colspan="4">Astro</th></tr>
+        <tr><td>Moonrise</td><td>Moonset</td><td>Sunrise</td><td>Sunset</td></tr>
+        <tr class="ast"><td></td><td></td><td></td><td></td></tr>
+        <tr><td colspan="4" class="mp">Moon Phase</td></tr>
+      </table>
+    </div>
+    <form autocomplete="off">
+      <input type="search" id = "s_bar" placeholder="  Search your Location">
+      <button>Search</button>
+    </form>
     <div class = "container first animated">
-      <center>Mumbai, India
-        <h6>ok</h6>
-        <span >Wind speed</span><br><span>Humidity</span>
+      <span id="fl"></span><span id="fl1">&nbsp;&nbsp;&nbsp;&nbsp;feels like</span>
+      <center>
+        <h5></h5>
+        <span id="nfl">Wind speed</span><br><span id="nfl">Humidity</span>
         <table class = "t_data visibility" id = "t_1">
           <tr><th colspan="7" class="t_h">7 Days Ahead</th></tr>
           <tr></tr>
           <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr class="d_img"><td><img/></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
+          <tr class="d_img"><td><img></td><td><img></td><td><img></td><td><img></td>
+          <td><img></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
           <tr><th colspan="7" class="t_h">Hourly</th></tr>
           <tr></tr>
           <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr class="h_temp"><td><img/></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr>
+          <tr class="h_temp"><td><img></td><td><img></td><td><img></td><td><img></td>
+          <td><img></td><td><img></td><td><img></td></tr>
         </table>
       </center>
     </div>
     <div class = "container second animated">
-      <center>Punjab, India
-        <h6>ok</h6>
+      <span id="fl"></span><span id="fl1">&nbsp;&nbsp;&nbsp;&nbsp;feels like</span>
+      <center>
+        <h5></h5>
         <table class = "t_data visibility" id = "t_2">
           <tr><th colspan="7" class="t_h">7 Days Ahead </th></tr>
           <tr></tr>
           <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="d_img"><td><img></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
+          <td><img></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
           <tr><th colspan="7" class="t_h">Hourly</th></tr>
           <tr></tr>
           <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="h_temp"><td><img></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr>
+          <td><img></td><td><img></td><td><img></td></tr>
         </table>
-        <span>Wind speed</span><br><span>Humidity</span>
+        <span id="nfl">Wind speed</span><br><span id="nfl">Humidity</span>
       </center>
     </div>
     <div class = "container third animated">
-      <center>New Delhi
-        <h6>ok</h6>
+      <span id="fl"></span><span id="fl1">&nbsp;&nbsp;&nbsp;&nbsp;feels like</span>
+      <center>
+        <h5></h5>
         <table class = "t_data visibility" id = "t_3">
           <tr><th colspan="7" class="t_h">7 Days Ahead</th></tr>
           <tr></tr>
           <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="d_img"><td><img/></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
+          <td><img></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
           <tr><th colspan="7" class="t_h">Hourly</th></tr>
           <tr></tr>
           <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="h_temp"><td><img/></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr>
+          <td><img></td><td><img></td><td><img></td></tr>
         </table>
-        <span>Wind speed</span><br><span>Humidity</span>
+        <span id="nfl">Wind speed</span><br><span id="nfl">Humidity</span>
       </center>
     </div>
     <div class = "container fourth animated">
-      <center>Los Angeles
-        <h6>ok</h6>
+      <span id="fl"></span><span id="fl1">&nbsp;&nbsp;&nbsp;&nbsp;feels like</span>
+      <center>
+        <h5></h5>
         <table class = "t_data visibility" id = "t_4">
           <tr><th colspan="7" class="t_h">7 Days Ahead</th></tr>
           <tr></tr>
           <tr class="days"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="temp"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="d_img"><td><img/></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
+          <td><img></td><td><img></td><td><img></td></tr><tr class="blank_r"></tr>
           <tr><th colspan="7" class="t_h">Hourly</th></tr>
           <tr></tr>
           <tr class="hour"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
           <tr class="h_temp"><td><img/></td><td><img></td><td><img></td><td><img></td>
-          <td><img/></td><td><img></td><td><img></td></tr>
+          <td><img></td><td><img></td><td><img></td></tr>
         </table>
-        <span>Wind speed</span><br><span>Humidity</span>
+        <span id="nfl">Wind speed</span><br><span id="nfl">Humidity</span>
       </center>
     </div>
+    <table id="s_table" class="hide1">
+      <tr class="s_td"><td></td></tr>
+      <tr class="s_td"><td></td></tr>
+      <tr class="s_td"><td></td></tr>
+      <tr class="s_td"><td></td></tr>
+    </table>
   <script src = "script.js"></script>
   </body>
 </html>
-
