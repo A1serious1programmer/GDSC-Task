@@ -1,19 +1,20 @@
 #title{
-  font-size: 80px;
-  color: ##5b0a05;
+  font-size: 60px;
   position: absolute;
   display: inline-block;
   left: 2%;
   top: 3%;
   font-family: 'Skranji', cursive;
+  color: white;
 }
 #con{
   position: absolute;
   display: inline-block;
   top: 12%;
   left: 2%;
-  font-size: 40px;
+  font-size: 20px;
   font-family: 'Dancing Script', cursive;
+  color: white;
 }
 .ani{
   animation-name: expand;
@@ -21,20 +22,15 @@
 .ani2{
   animation-name: contract;
 }
+.fadein{
+  animation: fadein 1s;
+}
 .visibility{
   visibility: hidden;
 }
-.test{
-  animation-name: visi;
-  animation-duration: 4s;
-  width: 10%;
-  height: 10%;
-  bottom: 5%;
-  background-color: yellow;
-}
-@keyframes visi{
-  from {visibility: hidden;}
-  to {visibility: visible;}
+@keyframes fadein{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 @keyframes expand{
        from {height: 20%; width: 15%;}
@@ -43,58 +39,167 @@
 @keyframes contract{
   to {height: 20%; width: 15%;}
 }
-.first{top: 35%;
+.first{top: 38%;
        left: 6%;
        height: 20%;
        width: 15%;
        animation-duration: 0.3s;
 }
-.second{top: 35%;
+.second{top: 38%;
        left: 30%;
        height: 20%;
        width: 15%;
        animation-duration: 0.3s;
      }
-.third{top: 35%;
+.third{top: 38%;
        left: 54%;
        height: 20%;
        width: 15%;
        animation-duration: 0.3s;
      }
-.fourth{top: 35%;
+.fourth{top: 38%;
         left: 78%;
         height: 20%;
         width: 15%;
         animation-duration: 0.3s;
       }
 
+#nav_bar{
+  position: absolute;
+  display: inline-block;
+  top: 10%;
+  right: 5%;
+  color: white;
+  font-size: 20px;
+  font-family: 'Skranji', cursive;
+}
+#nav_bar td{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#nav_bar td:hover{
+  background-color: grey;
+  cursor: pointer;
+}
+.aboutme{
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 20%;
+  border-left: solid 1px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  height: 30%;
+}
+
+.docs{
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 20%;
+  border-left: solid 1px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  height: 30%;
+}
+.contact{
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 20%;
+  border-left: solid 1px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  height: 30%;
+}
 body{
-  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  background-image: url("blue-9809.gif");
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.s_t_b{
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+#s_table{
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  font-size: 25px;
+  top: 23%;
+  width: 25%;
+  left: 64%;
+  border: 1px solid black;
+}
+#s_table tr{
+  width: 100%;
+}
+.s_td{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#blackbg{
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  background-color: black;
+}
+
+.s_td:hover{
+  background-color: grey;
+  cursor: pointer;
 }
 
 #s_bar{
   border-radius: 8px;
   position: absolute;
   display: inline-block;
-  top: 7%;
+  top: 17%;
   font-size: 20px;
   height: 5%;
   width: 25%;
-  left: 62%;
+  left: 64%;
 }
-
-h6{
-  margin: 0 auto;
+#fl1{
+  font-family: 'Dancing Script', cursive;
+}
+#fl{
+  margin: 0;
+  text-align: left;
+  padding-left: 6%;
+  padding-top: 2%;
+  font-size: 48px;
+  left: 0%;
+}
+#icon{
+  position: absolute;
+  top: 17%;
+  left: 68%;
+  width: 2%;
+}
+h5{
+  margin: 0;
+  text-align: left;
+  padding-left: 6%;
+  font-size: 15px;
 }
 button{
   position: absolute;
   display: inline-block;
-  left: 88%;
-  top: 7%;
+  left: 90%;
+  top: 17%;
   font-size: 20px;
   border-radius: 30px;
   background-color: white;
-  width: 7%;
+  width: 5%;
   height: 5%;
 }
 
@@ -104,7 +209,7 @@ button{
   display: inline-block;
 }
 button:hover{
-  background-color: #b84d69;
+  background-color: grey;
 }
 .info img{
   width: 10%;
@@ -122,7 +227,6 @@ h3{
   top: 40%;
   width: 100%;
   height: 40%;
-  font-size: 30px;
 }
 
 #p1{
@@ -139,17 +243,21 @@ img{
   position: absolute;
   display: inline-block;
   font-family: 'Quicksand', sans-serif;
-  background-color: pink;
+  background-color: grey;
   font-size: 40px;
   border-radius: 30px;
+  color: white;
 }
 
 .info_block{
   display: inline-block;
   position: absolute;
-  left: 30%;
-  top: 30%;
-  background-color: white;
+  left: 15%;
+  top: 35%;
+  background-color: grey;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
   width: 40%;
   height: 60%;
   border-radius: 20px;
@@ -157,10 +265,14 @@ img{
 
 .t_h{
   font-size:30px;
+  padding-bottom: 1em;
 }
 
 .hide{
   display: none;
+}
+.hide1{
+  visibility: hidden;
 }
 
 .blank_r{
@@ -171,18 +283,87 @@ span{
   font-size: 20px;
 }
 
-.info{
-  width: 100%;
-  height: 20px;
-  font-size: 20px;
-  position: absolute;
-  bottom: 0;
-}
 .t_data{
 position: absolute;
 font-size: 15px;
 width: 100%;
 border-spacing: 3px;
-bottom: 10%;
+bottom: 3%;
+left: 1%;
 }
+
+.info_block_r1{
+  display: inline-block;
+  position: absolute;
+  right: 14%;
+  background-color: grey;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  width: 30%;
+  height: 25%;
+  border-radius: 20px;
+}
+.info_block_r2{
+  display: inline-block;
+  position: absolute;
+  right: 14%;
+  background-color: grey;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  width: 30%;
+  height: 29%;
+  border-radius: 20px;
+}
+.info_block_r1{
+  top: 35%;
+}
+.info_block_r2{
+  top: 66%;
+}
+#i_b_r1{
+  position: absolute;
+  top: 10%;
+  padding: 2% 0 0 2%;
+  width: 100%;
+}
+#i_b_r1 th{
+  color: black;
+  font-size: 30px;
+}
+#i_b_r2 th{
+  color: black;
+  font-size: 30px;
+}
+.i_data th{
+  font-size: 30px;
+  color: black;
+}
+#i_b_r2{
+  padding: 2% 0 0 2%;
+  width: 100%;
+}
+#err_c{
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
+  position: absolute;
+  top: 23%;
+  left: 35%;
+  font-size: 20px;
+  color: white;
+}
+.mp{
+  padding-top: 40px;
+}
+#hov{
+  position: absolute;
+  display: inline-block;
+  top: 20%;
+  left: 2%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
 
