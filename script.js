@@ -162,7 +162,7 @@ function show_det(event,locat){
   mp = document.querySelector(".mp");
   fetch("https://api.weatherapi.com/v1/forecast.json?key=5623049573814f75a9a181747231102&q=" + locat + "&days=7")
   .then(response => response.json())
-  .then(data => {mp.innerHTML += " - "+ data.forecast.forecastday[0].astro.moon_phase
+  .then(data => {mp.innerHTML = "Moon Phase" + " - "+ data.forecast.forecastday[0].astro.moon_phase
     ast[0].innerHTML = data.forecast.forecastday[0].astro.moonrise
     ast[1].innerHTML = data.forecast.forecastday[0].astro.moonset
     ast[2].innerHTML = data.forecast.forecastday[0].astro.sunrise
