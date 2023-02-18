@@ -263,7 +263,8 @@ img{
   height: 60%;
   border-radius: 20px;
 }
-
+#nfl{
+  font-size: 15px;
 .t_h{
   font-size:30px;
   padding-bottom: 1em;
@@ -281,7 +282,7 @@ img{
 }
 
 span{
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .t_data{
