@@ -120,7 +120,6 @@
 }
 body{
   background-image: url("bg.png");
-  background-color: lightblue;
   margin: 0;
   padding: 0;
   border: 0;
@@ -172,10 +171,13 @@ body{
 #fl1{
   font-family: 'Dancing Script', cursive;
 }
+#nfl{
+  font-size: 18px;
+}
 #fl{
   margin: 0;
   text-align: left;
-  padding-left: 4%;
+  padding-left: 3%;
   padding-top: 2%;
   font-size: 48px;
   left: 0%;
@@ -263,8 +265,7 @@ img{
   height: 60%;
   border-radius: 20px;
 }
-#nfl{
-  font-size: 15px;
+
 .t_h{
   font-size:30px;
   padding-bottom: 1em;
