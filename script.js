@@ -83,7 +83,7 @@ document.querySelector("#nav_bar td").addEventListener("click", function(){
 });
 
 for (let i = 0 ; i < 7 ; i++){
-  fetch("https://api.weatherapi.com/v1/forecast.json?key=04d3bcaaaf664504ab3124143232803&q=" + all_loc[0] + "&days=7")
+  fetch("https://api.weatherapi.com/v1/forecast.json?key=46d3eb500e43479ba8a122456231604&q=" + all_loc[0] + "&days=7")
   .then(response => response.json())
   .then(data => {document.querySelector(".first h5").innerHTML = all_loc[0] + ", "+data.location.country
     d1[i].innerHTML = data.forecast.forecastday[i].date.substring(6,10).replace("-","/")
@@ -96,7 +96,7 @@ for (let i = 0 ; i < 7 ; i++){
   ht1[i].innerHTML = "-"}})
 }
 for (let i = 0 ; i < 7 ; i++){
-  fetch("https://api.weatherapi.com/v1/forecast.json?key=04d3bcaaaf664504ab3124143232803&q=" + all_loc[1] + "&days=7")
+  fetch("https://api.weatherapi.com/v1/forecast.json?key=46d3eb500e43479ba8a122456231604&q=" + all_loc[1] + "&days=7")
   .then(response => response.json())
   .then(data => {document.querySelector(".second h5").innerHTML = all_loc[1] + ", " + data.location.country
     d2[i].innerHTML = data.forecast.forecastday[i].date.substring(6,10).replace("-","/")
@@ -109,7 +109,7 @@ else{h2[i].innerHTML = "-"
 ht2[i].innerHTML = "-"}})
 }
 for (let i = 0 ; i < 7 ; i++){
-  fetch("https://api.weatherapi.com/v1/forecast.json?key=04d3bcaaaf664504ab3124143232803&q=" + all_loc[2] + "&days=7")
+  fetch("https://api.weatherapi.com/v1/forecast.json?key=46d3eb500e43479ba8a122456231604&q=" + all_loc[2] + "&days=7")
   .then(response => response.json())
   .then(data => {document.querySelector(".third h5").innerHTML = all_loc[2] + ", "+data.location.country
     d3[i].innerHTML = data.forecast.forecastday[i].date.substring(6,10).replace("-","/")
@@ -122,7 +122,7 @@ else{h3[i].innerHTML = "-"
 ht3[i].innerHTML = "-"}})
 }
 for (let i = 0 ; i < 7 ; i++){
-  fetch("https://api.weatherapi.com/v1/forecast.json?key=04d3bcaaaf664504ab3124143232803&q=" + all_loc[3] + "&days=7")
+  fetch("https://api.weatherapi.com/v1/forecast.json?key=46d3eb500e43479ba8a122456231604&q=" + all_loc[3] + "&days=7")
   .then(response => response.json())
   .then(data => {document.querySelector(".fourth h5").innerHTML = all_loc[3] + ", "+data.location.country
     d4[i].innerHTML = data.forecast.forecastday[i].date.substring(6,10).replace("-","/")
@@ -136,7 +136,7 @@ ht4[i].innerHTML = "-"}})
 }
 
 for (let i = 0 ; i < all_loc.length ; i++){
-  fetch("https://api.weatherapi.com/v1/current.json?key=04d3bcaaaf664504ab3124143232803&q=" + all_loc[i])
+  fetch("https://api.weatherapi.com/v1/current.json?key=46d3eb500e43479ba8a122456231604&q=" + all_loc[i])
   .then(response => response.json())
   .then(data => {all_h6[i].innerHTML = data.current.temp_c + "°C"
                  all_span[2*i].innerHTML += "  -  "+ data.current.wind_kph + "kph" + " "+data.current.wind_dir
@@ -160,7 +160,7 @@ function show_det(event,locat){
   wt = document.querySelectorAll(".time td");
   ast = document.querySelectorAll(".ast td");
   mp = document.querySelector(".mp");
-  fetch("https://api.weatherapi.com/v1/forecast.json?key=04d3bcaaaf664504ab3124143232803&q=" + locat + "&days=7")
+  fetch("https://api.weatherapi.com/v1/forecast.json?key=46d3eb500e43479ba8a122456231604&q=" + locat + "&days=7")
   .then(response => response.json())
   .then(data => {mp.innerHTML = "Moon Phase" + " - "+ data.forecast.forecastday[0].astro.moon_phase
     ast[0].innerHTML = data.forecast.forecastday[0].astro.moonrise
@@ -200,7 +200,7 @@ document.querySelector("input").addEventListener("keydown", function(event){
   var loca = "";
   setTimeout(function(){loca = document.querySelector("input").value;
   if(document.querySelector("input").value!=0){
-  fetch("https://api.weatherapi.com/v1/search.json?key=04d3bcaaaf664504ab3124143232803&q=" + loca)
+  fetch("https://api.weatherapi.com/v1/search.json?key=46d3eb500e43479ba8a122456231604&q=" + loca)
   .then(response => response.json())
   .then(data =>{if(data.length != 0){
                 document.querySelector("#s_table").classList.remove("hide1");
