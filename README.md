@@ -4,4 +4,4 @@ the site is not showing all the details because i was using the trial version of
 Due to this reason , searching for specific locations also won't work. 
 Will fix the issue in some time.
 
-link - [https://a1serious1programmer.github.io/weather-forecast/](https://ojas-sharma-01.github.io/weather-forecast/)https://ojas-sharma-01.github.io/weather-forecast/
+link - https://ojas-sharma-01.github.io/weather-forecast/
