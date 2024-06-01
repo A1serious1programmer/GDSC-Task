@@ -167,7 +167,7 @@ function show_det(event,locat){
     ast[1].innerHTML = data.forecast.forecastday[0].astro.moonset
     ast[2].innerHTML = data.forecast.forecastday[0].astro.sunrise
     ast[3].innerHTML = data.forecast.forecastday[0].astro.sunset
-    for (let i = 0 ; i < 7 ; i++){
+    for (let i = 0 ; i < 3 ; i++){
   document.querySelector("#s_table").classList.add("hide1")
   document.querySelector("h3").innerHTML = locat +", "+ data.location.country
   document.querySelector("#p1").innerHTML = data.current.temp_c + "°C"
